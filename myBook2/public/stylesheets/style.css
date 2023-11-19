@@ -1,0 +1,28 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+	.navbar-nav {
+		align-items: center;
+		display: flex;
+		margin: 0 auto;
+    flex-direction: row;
+    justify-content: center;
+    
+	}
+
+  .navbar-nav > li{
+    padding: 0% 40px 0% 40px;
+}
+  #login{
+    padding-right:0px;
+}
+
+#carouselExampleDark {
+  text-align: center;
+}
