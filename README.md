@@ -30,5 +30,12 @@ localStorage 값 지우기 및 카카오 로그인 토큰을 같이 지워줬다
 <img width="1008" alt="스크린샷 2023-11-26 오후 8 51 33" src="https://github.com/jungtaeyeon/ejs_practice/assets/145528409/f829e25b-4f99-4ef9-9042-edb3fe29a97b">
 <img width="693" alt="스크린샷 2023-11-26 오후 8 52 53" src="https://github.com/jungtaeyeon/ejs_practice/assets/145528409/314278c9-0943-4834-af84-cadde0dada08">
 
+# 2일차 결과화면
+<img width="1429" alt="2일차 결과화면_1" src="https://github.com/jungtaeyeon/ejs_practice/assets/145528409/dceb3347-1e97-4add-9125-7aa76cd81366">
+<img width="1435" alt="2일차 결과화면_2" src="https://github.com/jungtaeyeon/ejs_practice/assets/145528409/e1dd3838-72db-4e2e-a91b-6258482ba0d4">
+<img width="1433" alt="2일차 결과화면_3" src="https://github.com/jungtaeyeon/ejs_practice/assets/145528409/7bfc212b-1594-49f8-b6e9-c239d0e4c6eb">
+
+
+
 
 
