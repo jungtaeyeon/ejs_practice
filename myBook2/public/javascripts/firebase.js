@@ -5,12 +5,13 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebas
 
 const firebaseConfig = {
   // 객체 - 키: 값
-  apiKey: "AIzaSyC7QEJjivA4DLjOmwgKwbkTCN3FSmSkXR4",
-  authDomain: "jty20231106.firebaseapp.com",
-  projectId: "jty20231106",
-  storageBucket: "jty20231106.appspot.com",
-  messagingSenderId: "71039890999",
-  appId: "1:71039890999:web:b45c10164c7490ba9271b2",
+  apiKey: "AIzaSyBbKMZh-XdiAUn-45V-BMkZMcCVXFso1YM",
+    authDomain: "mybook-28ad3.firebaseapp.com",
+    databaseURL: "https://mybook-28ad3-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "mybook-28ad3",
+    storageBucket: "mybook-28ad3.appspot.com",
+    messagingSenderId: "419512552070",
+    appId: "1:419512552070:web:72f810fe9d7058bbde5f07"
 };
 
 // Initialize Firebase

@@ -8,14 +8,21 @@ a {
 		margin: 0 auto;
     flex-direction: row;
     justify-content: center;
-    
 	}
+  
+  .navbar-nav-menu > li{
+    margin: 40px;
+  }
 
-  .navbar-nav > li{
+  /* .navbar-nav > li{
     padding: 0% 40px 0% 40px;
-}
+} */
+
   #login{
-    padding-right:0px;
+    padding-right:0;
+}
+#email{
+  padding-right: 0;
 }
 
 #carouselExampleDark {

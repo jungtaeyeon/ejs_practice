@@ -18,6 +18,11 @@
       <div class="my-3">
         <button class="btn btn-success w-100">로그인</button>
       </div>
+      <div class="my-3">
+        <a href="javascript:kakaoLogin()">
+          <img src="/images/kakao_login.png" class="img-fluid w-100" alt="Kakao Login">
+        </a>
+      </div>
       <div class="text-end mt-3"><a href="/users/join">회원가입</a></div>
     </form>
   </div>
@@ -27,4 +32,64 @@
   import { getAuth, signInWithEmailAndPassword, } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
   const auth = getAuth(app);
   console.log(auth);
+
+  $(frm).on("submit", function (e) {
+    console.log("로그인버튼 클릭");
+    e.preventDefault();
+    //사용자가 화면에 입력한 이멜 주소 담기
+    let email = $(frm.email).val();
+    //사용자가 화면에 입력한 비번 담기
+    let password = $(frm.password).val();
+    console.log(`${email} ${password}`);
+    //https://firebase.google.com/docs/auth/web/start?hl=ko&authuser=0
+    //기존 사용자가 자신의 이메일 주소와 비밀번호를 사용해 로그인할 수 있는 양식을 만듭니다.
+    //사용자가 양식을 작성하면 signInWithEmailAndPassword 메서드를 호출합니다.
+    signInWithEmailAndPassword(auth, email, password)
+      .then((response) => {
+        // Signed in
+        const user = response.user;
+        //JSON.stringify(user) -> string으로 변환됨 - 글자를 알아볼 수 있다. - Object를 출력하지 않고
+        console.log(`user ===> ${JSON.stringify(user)}`); //[object, Object]  - JSON.parse():JSON-Array
+        console.log(`uid ====> ${user.uid}`);
+        console.log(`email ====> ${user.email}`);
+        localStorage.setItem("uid", `${user.uid}`); // 로컬 브라우저 저장소에 담음
+        localStorage.setItem("email", `${user.email}`); // 로컬 브라우저 저장소에 담음
+        // location.href = "/"; // 로그인 성공 시, http://localhost:3000/ 으로 이동하게
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+      });
+  });
+
 </script>
+<!----------------------------------------------------------------- 카카오 로그인 ----------------------------------------------------------------->
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<script>
+  Kakao.init('ee0296fe27ba44244f593cf76b52aa84'); //발급받은 키 중 javascript키를 사용해준다.
+  console.log(Kakao.isInitialized()); // sdk초기화여부판단
+  //카카오로그인
+  function kakaoLogin() {
+      Kakao.Auth.login({
+        success: function (response) {
+          Kakao.API.request({
+            url: '/v2/user/me',
+            success: function (response) {
+              console.log(response)
+              const kakaoId = response.id;
+              console.log(`${kakaoId}`);
+              localStorage.setItem("id", `${kakaoId}`);
+              location.href = '/';
+            },
+            fail: function (error) {
+              console.log(error)
+            },
+          })
+        },
+        fail: function (error) {
+          console.log(error)
+        },
+      })
+    }
+  </script>
