@@ -21,7 +21,7 @@ Handlebars를 사용해서 뿌려줬다.
 로그아웃 시 localStorage.clear()를 사용해서 값 지우기.
 <img width="798" alt="스크린샷 2023-11-26 오후 3 53 02" src="https://github.com/jungtaeyeon/ejs_practice/assets/145528409/9617313d-6bde-45e5-9466-5b22eed36a5b">
 <img width="717" alt="스크린샷 2023-11-26 오후 3 52 51" src="https://github.com/jungtaeyeon/ejs_practice/assets/145528409/900b0fc6-d816-48b1-9285-80d7bd0d211c">
-<img width="570" alt="스크린샷 2023-11-26 오후 3 59 33" src="https://github.com/jungtaeyeon/ejs_practice/assets/145528409/f26ab5d8-e766-4a74-ba5a-8ebf55de4bbc">
+<img width="570" alt="스크린샷 2023-11-26 오후 3 59 33" src="https://github.com/jungtaeyeon/ejs_practice/assets/145528409/f26ab5d8-e766-4a74-ba5a-8ebf55de4bbc"><br/>
 
 - 카카오 에서 발급받은 api 키 중 javascript키를 사용해 카카오 로그인 구현.<br/>
   로그인 시 id를 localStorage에 넣어 MyPage 대신 id를 넣어줌<br/>
